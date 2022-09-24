@@ -19,7 +19,7 @@
   font-family: "Robotomedium";
   src: url(./Font/Roboto/Roboto-Medium.ttf);
 }
-/*-----------------------------------------------*/
+
 /* styles*/
 * {
   box-sizing: border-box;
@@ -32,10 +32,11 @@ body {
   font-family: "Roboto";
   font-size: 30px;
   line-height: 1.5;
-  margin: 20px 20px 20px 100px;
-  padding: 20px;
+  margin: auto auto auto 100px;
+  padding: 30px;
   border: 2px solid black;
   border-radius: 5px;
+  max-width: 1200px;
 }
 
 /* nav style start */
@@ -91,7 +92,7 @@ nav a:hover {
   margin: auto;
 
   width: 100%;
-  max-width: 1000px;
+  max-width: 800px;
 }
 .div-img-back img {
   width: 100%;
@@ -103,10 +104,6 @@ nav a:hover {
   top: 100%;
   left: 50%;
   transform: translate(-50%, -50%);
-
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
-  box-shadow: 5px 1px 10px #fff;
 }
 
 /* about me button */
@@ -140,25 +137,28 @@ nav a:hover {
 
   text-align: center;
 }
-/* ------------------------------ */
+/*-----------------------------------------------------------------------------*/
 /* welcome style */
 main {
   margin-top: 120px;
 }
-.welcome h1 h2 {
+
+.welcome h2,
+h3 {
   text-align: center;
 }
-.welcome h1 {
+
+.welcome h2 {
   font-size: 3rem;
 }
 
 /* about me, skills, contact*/
 h4 {
   text-align: center;
-  font-size: 1.4rem;
+  font-size: 1em;
   text-decoration: underline 3px;
   text-underline-offset: 5px;
-  margin: 10px;
+  margin-top: 20px;
 }
 
 .about p:first-of-type {
