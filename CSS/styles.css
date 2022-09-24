@@ -90,7 +90,7 @@ nav a:hover {
   margin: auto;
 
   width: 100%;
-  max-width: 600px;
+  max-width: 1000px;
 }
 .div-img-back img {
   width: 100%;
@@ -124,19 +124,23 @@ nav a:hover {
 }
 
 .img h2 {
-  font-size: 2rem;
+  font-size: 5vw;
 }
 .img h3 {
-  font-size: 1em;
+  font-size: 2.5vw;
   color: #fff;
   position: absolute;
+  width: 100%;
   right: 50%;
   transform: translate(50%);
   z-index: 10;
+
+  text-align: center;
 }
 /* ------------------------------ */
+/* welcome style */
 main {
-  margin-top: 50px;
+  margin-top: 100px;
 }
 
 /* about me, skills, contact*/
