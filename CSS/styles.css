@@ -28,12 +28,13 @@
 }
 
 body {
-  background-color: #a0a0a0;
+  background-color: #4c4a4a;
   font-family: "Roboto";
   line-height: 1.5;
   margin: 20px 20px 20px 100px;
   padding: 20px;
-  border: 2px solid green;
+  border: 2px solid black;
+  border-radius: 5px;
 }
 
 header:not(.nav) {
@@ -56,11 +57,13 @@ header:not(.nav) {
   width: 60px;
   height: 60px;
   font-size: 0.8rem;
-  border: 1px solid grey;
+  margin: 5px 0;
   align-content: center;
   justify-content: center;
   margin-right: 200px;
-  border: 2px solid black; /*test!!!!*/
+  background-color: #a0a0a0;
+  color: #fff;
+  border-radius: 10%;
 }
 
 .flex-container-nav a {
@@ -79,16 +82,10 @@ nav a:hover {
 }
 
 /*img style start*/
-.div-img {
-  border: 1px solid white;
-
-  border-radius: 50%;
+.div-img-back {
+  width: 100%;
 }
 
-.div-img img {
-  width: 1000px;
-  height: auto;
-}
 /* about me button */
 .flex-container-nav a[href^="#about"]::before {
   content: "👨‍💻 ";
