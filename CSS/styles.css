@@ -82,8 +82,15 @@ nav a:hover {
 }
 
 /*img style start*/
-.div-img-back {
+.div-img-back img {
   width: 100%;
+  height: auto;
+}
+
+.div-img-me img {
+  width: 40%;
+  position: relative;
+  top: -150px;
 }
 
 /* about me button */
@@ -103,10 +110,6 @@ nav a:hover {
 
 /* ------------------------------ */
 /* header img style start */
-
-.img img {
-  width: 200px;
-}
 
 /* about me, skills, contact*/
 h3 {
