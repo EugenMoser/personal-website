@@ -42,8 +42,6 @@ body {
 }
 
 /* nav style start */
-.img h2 {
-}
 
 .flex-container-nav {
   position: fixed;
@@ -164,12 +162,21 @@ h4 {
 }
 
 a:link {
-  text-decoration: underline;
-  color: inherit;
+  text-decoration: underline #3498db;
+  color: #fff;
+}
+a:hover:not(.flex-container-nav) {
+  color: #3498db;
+  text-decoration: underline #fff;
+}
+/* besuchte Seiten außer nav */
+a:visited :not(.flex-container-nav) {
+  color: #3498db;
+  text-decoration: underline #fff;
 }
 
-a:visited :not(.flex-container-nav) {
-  color: purple;
+a:active :not(.flex-container-nav) {
+  background-color: yellow;
 }
 
 /* skills style */
@@ -189,17 +196,36 @@ a:visited :not(.flex-container-nav) {
 }
 
 .skills-list li {
-  border: 1px solid #fff;
+  background-color: #a0a0a0;
+  color: #000;
   border-radius: 10%;
   width: 200px;
   text-align: center;
 }
 
 .skills li::before {
-  content: "💻";
   padding-right: 10px;
 }
 
+.skills li:nth-of-type(1)::before {
+  content: url(./image/icons/html-30.png);
+}
+
+.skills li:nth-of-type(2)::before {
+  content: url(./image/icons/css-30.png);
+}
+
+.skills li:nth-of-type(3)::before {
+  content: url(./image/icons/javascript-30.png);
+}
+
+.skills li:nth-of-type(4)::before {
+  content: url(./image/icons/react-30.png);
+}
+
+.skills li:nth-of-type(5)::before {
+  content: url(./image/icons/node-30.png);
+}
 /* contact style */
 
 .contact {
@@ -213,20 +239,45 @@ a:visited :not(.flex-container-nav) {
 
 /* textarea style */
 
+.form {
+  margin-top: 50px;
+  text-align: center;
+}
+
 textarea {
   width: 100%;
   height: 150px;
-  margin-top: 50px;
+  margin-top: 20px;
+  font-size: 0.8em;
 }
 
+::placeholder {
+  color: yellow;
+}
+
+button {
+  font-size: 1em;
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+}
+
+button:hover {
+  color: #fff;
+  background-color: #3498db;
+}
 /* footer style */
 
 footer {
-  color: #fff;
-  background-color: #000;
-  padding: 10px;
+  position: relative;
+  bottom: 0;
 
-  margin: 50px -20px 0 -20px;
+  color: #fff;
+  background-color: #a0a0a0;
+  padding: 10px;
+  font-size: 0.8em;
+  margin: 50px -20px -20px -20px;
+  border-radius: 10%;
 }
 
 .footer ul {
@@ -235,4 +286,9 @@ footer {
 }
 .footer ul > li {
   list-style: none;
+}
+
+.footer ul li:last-child {
+  font-size: 0.5em;
+  align-self: flex-end;
 }
