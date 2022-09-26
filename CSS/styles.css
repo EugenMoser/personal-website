@@ -19,30 +19,29 @@
   font-family: "Robotomedium";
   src: url(./Font/Roboto/Roboto-Medium.ttf);
 }
-/*-----------------------------------------------*/
+
 /* styles*/
 * {
   box-sizing: border-box;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
 }
 
 body {
-  background-color: #4c4a4a;
+  background-color: #090909;
   font-family: "Roboto";
   font-size: 30px;
   line-height: 1.5;
   margin: 20px 20px 20px 100px;
-  padding: 20px;
-  border: 2px solid black;
-  border-radius: 5px;
+  padding: 30px;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px;
+  max-width: 1200px;
+  color: #fff;
 }
 
 /* nav style start */
-.img h2 {
-  font-size: 1vh;
-  text-align: center;
-}
 
 .flex-container-nav {
   position: fixed;
@@ -80,8 +79,7 @@ body {
 }
 
 nav a:hover {
-  cursor: pointer;
-  color: rgb(234, 135, 22);
+  cursor: url(./image/icons/cursor-48.png), auto;
 }
 
 /*img style start*/
@@ -91,7 +89,7 @@ nav a:hover {
   margin: auto;
 
   width: 100%;
-  max-width: 1000px;
+  max-width: 1200px;
 }
 .div-img-back img {
   width: 100%;
@@ -103,29 +101,15 @@ nav a:hover {
   top: 100%;
   left: 50%;
   transform: translate(-50%, -50%);
-
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
-  box-shadow: 5px 1px 10px #fff;
 }
 
 /* about me button */
-.flex-container-nav a[href^="#about"]::before {
-  content: "👨‍💻 ";
-}
 
-/* about me button */
-.flex-container-nav a[href^="#skills"]::before {
-  content: "💾 ";
-}
-
-/* about me button */
-.flex-container-nav a[href^="#contact"]::before {
-  content: "🛰 ";
-}
 /*Eugen Moser*/
 .img h2 {
   font-size: 5vw;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 /*junior web dev*/
@@ -137,28 +121,39 @@ nav a:hover {
   right: 50%;
   transform: translate(50%);
   z-index: 10;
-
   text-align: center;
+  margin-top: 5px;
 }
-/* ------------------------------ */
+/*-----------------------------------------------------------------------------*/
 /* welcome style */
 main {
-  margin-top: 120px;
+  margin-top: 160px;
 }
-.welcome h1 h2 {
+
+.welcome h2,
+h3 {
   text-align: center;
 }
-.welcome h1 {
+
+.welcome h2 {
   font-size: 3rem;
+}
+
+section h4 {
+  margin-bottom: 10px;
 }
 
 /* about me, skills, contact*/
 h4 {
   text-align: center;
-  font-size: 1.4rem;
+  font-size: 1.3em;
   text-decoration: underline 3px;
   text-underline-offset: 5px;
-  margin: 10px;
+  margin-top: 20px;
+}
+
+.about {
+  margin-top: 50px;
 }
 
 .about p:first-of-type {
@@ -166,44 +161,134 @@ h4 {
   text-align: center;
 }
 
-a {
-  text-decoration: underline;
-  color: inherit;
+a:link {
+  text-decoration: underline #3498db;
+  color: #fff;
 }
-
+a:hover:not(.flex-container-nav) {
+  color: #3498db;
+  text-decoration: underline #fff;
+}
+/* besuchte Seiten außer nav */
 a:visited :not(.flex-container-nav) {
-  color: purple;
+  color: #3498db;
+  text-decoration: underline #fff;
 }
 
-.skills ul {
+a:active :not(.flex-container-nav) {
+  background-color: yellow;
+}
+
+/* skills style */
+
+.skills {
+  margin-top: 50px;
+}
+
+.skills-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+
   margin: 30px;
   list-style-type: none;
 }
 
+.skills-list li {
+  background-color: #a0a0a0;
+  color: #000;
+  border-radius: 10%;
+  width: 200px;
+  text-align: center;
+}
+
 .skills li::before {
-  content: "💻";
   padding-right: 10px;
 }
 
+.skills li:nth-of-type(1)::before {
+  content: url(./image/icons/html-30.png);
+}
+
+.skills li:nth-of-type(2)::before {
+  content: url(./image/icons/css-30.png);
+}
+
+.skills li:nth-of-type(3)::before {
+  content: url(./image/icons/javascript-30.png);
+}
+
+.skills li:nth-of-type(4)::before {
+  content: url(./image/icons/react-30.png);
+}
+
+.skills li:nth-of-type(5)::before {
+  content: url(./image/icons/node-30.png);
+}
+/* contact style */
+
+.contact {
+  margin-top: 50px;
+  margin: auto;
+}
 .contact address {
-  font-size: 0.8rem;
+  font-size: 0.8em;
   font-style: normal;
 }
+
+/* textarea style */
+
+.form {
+  margin-top: 50px;
+  text-align: center;
+}
+
 textarea {
   width: 100%;
   height: 150px;
-  margin: 20px 0 20px;
+  margin-top: 20px;
+  font-size: 0.8em;
 }
 
-footer {
-  color: #fff;
-  background-color: #000;
+::placeholder {
+  color: yellow;
+}
+
+button {
+  font-size: 1em;
   padding: 10px;
+  width: 200px;
+  text-align: center;
+}
+
+button:hover {
+  color: #fff;
+  background-color: #3498db;
+}
+/* footer style */
+
+footer {
+  position: relative;
+  bottom: 0;
+
+  color: #fff;
+  background-color: #a0a0a0;
+  padding: 10px;
+  font-size: 0.8em;
+  margin: 50px -20px -20px -20px;
+  border-radius: 10%;
+}
+
+.footer ul {
   display: flex;
   justify-content: space-around;
-  margin: 0px -20px -20px -20px;
+}
+.footer ul > li {
+  list-style: none;
 }
 
-footer {
-  justify-content: flex-end;
+.footer ul li:last-child {
+  font-size: 0.5em;
+  align-self: flex-end;
 }
